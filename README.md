@@ -3,7 +3,7 @@
 This project uses PySpark and KMeans clustering to analyze NBA players' shooting data and identify their most "comfortable zones" on the court—zones where their shot success rate is the highest.
 
 ## Dataset
-The dataset is expected to be a CSV file named `shot_logs.csv`, containing fields including:
+The [dataset](https://www.kaggle.com/datasets/dansbecker/nba-shot-logs) is expected to be a CSV file named `shot_logs.csv`, containing fields including:
 - `PLAYER_NAME`
 - `SHOT_DIST`
 - `CLOSE_DEF_DIST`
@@ -11,8 +11,7 @@ The dataset is expected to be a CSV file named `shot_logs.csv`, containing field
 - `SHOT_RESULT`
 
 Ensure this file is uploaded to HDFS:
-```bash
-hdfs dfs -put shot_logs.csv /user/root/
+- hdfs dfs -put shot_logs.csv /user/root/
 
 ## Approach
 1. Preprocess the dataset by cleaning nulls and casting key columns to DoubleType.
